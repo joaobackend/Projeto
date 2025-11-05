@@ -1,4 +1,4 @@
-package br.com.senai.backend.Projeto.estoque.models;
+package br.com.senai.backend.estoque.models;
 
 import java.time.LocalDate;
 
