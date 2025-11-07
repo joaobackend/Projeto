@@ -6,21 +6,21 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import br.com.senai.backend.estoque.models.NotaCompra;
-import br.com.senai.backend.estoque.services.NotaCompraService;
+import br.com.senai.backend.estoque.models.Material;
+import br.com.senai.backend.estoque.services.MaterialService;
 
 @RestController
-@RequestMapping("/nota_compra")
-public class NotaCompraController {
+@RequestMapping("/material")
+public class MaterialController {
+    @Autowired
+    private MaterialService mService;
+
    @GetMapping("/teste")
    public String teste(){
-        return "Consegui, nota!";
-   }
-     @Autowired
-        private NotaCompraService ncService;
-     @PostMapping("/salvar")
-    public NotaCompra salvar(@RequestBody NotaCompra notacompra) {
-        return ncService.salvar(notacompra);
+        return "Consegui, material!";
     }
-        }
+     @PostMapping("/salvar")
+    public Material salvar(@RequestBody Material material) {
+        return mService.salvar(material);
+    }
+}
