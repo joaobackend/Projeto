@@ -12,8 +12,8 @@ public class NotaCompraService {
         @Autowired
         private NotaCompraRepository ncRepository;
 
-            public NotaCompra salvar(NotaCompra notacompra){
-                return ncRepository.save(notacompra);
+            public NotaCompra salvar(NotaCompra notaCompra){
+                return ncRepository.save(notaCompra);
 
             }
 

@@ -13,12 +13,13 @@ import br.com.senai.backend.estoque.services.NotaCompraService;
 @RestController
 @RequestMapping("/nota_compra")
 public class NotaCompraController {
+    @Autowired
+    private NotaCompraService ncService;
+    
    @GetMapping("/teste")
    public String teste(){
         return "Consegui, nota!";
    }
-     @Autowired
-        private NotaCompraService ncService;
      @PostMapping("/salvar")
     public NotaCompra salvar(@RequestBody NotaCompra notacompra) {
         return ncService.salvar(notacompra);
